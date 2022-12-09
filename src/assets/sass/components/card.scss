@@ -21,7 +21,7 @@
                 text-transform: uppercase;
                 letter-spacing: calc(65 * 0.003em);
                 line-height: 1.55;
-                margin-bottom: $p-0_5;
+                margin-bottom: 0.675rem;
             }
         }
         .card-title {
@@ -72,6 +72,12 @@
             .card-title {
                 h1 {
                     padding-right: $p-3;
+                }
+            }
+
+            .card-desc {
+                p {
+                    line-height: 1.6;
                 }
             }
         }
