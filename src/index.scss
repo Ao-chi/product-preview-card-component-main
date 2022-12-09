@@ -1,0 +1,14 @@
+@import "./assets/sass/abstracts/reset";
+@import "./assets/sass/abstracts/functions";
+@import "./assets/sass/abstracts/mixins";
+@import "./assets/sass/abstracts/variables";
+@import "./assets/sass/base/base";
+@import "./assets/sass/base/fonts";
+
+body {
+    height: 100%;
+    @include display-flex(center, center);
+    background: $cream;
+    overflow-x: hidden;
+    padding: 5%;
+}

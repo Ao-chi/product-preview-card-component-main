@@ -1,0 +1,54 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+
+.card-image {
+    height: 240px;
+    width: 100%;
+    overflow: hidden;
+    .image {
+        background: url("/assets/images/image-product-mobile.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -100%;
+            right: -100%;
+        }
+    }
+
+    &:hover {
+        .image {
+            transform: scale(1.2);
+            transition: ease-in-out 0.3s;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                background: rgb(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    @include breakpoint(sm, min) {
+        height: 400px;
+        width: 100%;
+        .image {
+            background: url("/assets/images/image-product-desktop.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

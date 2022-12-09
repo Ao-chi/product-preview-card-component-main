@@ -1,0 +1,25 @@
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../base/fonts";
+
+button {
+    @include display-flex(center, center);
+    @include Montserrat-font;
+    font-weight: font-weight(font-bold);
+    background: $dark-cyan;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: $p-1;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+        background: $darker-cyan;
+    }
+
+    svg {
+        margin-right: $p-0_5;
+    }
+}
