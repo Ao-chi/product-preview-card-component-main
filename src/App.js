@@ -3,9 +3,9 @@ import Card from "./components/Card";
 
 function App(props) {
     return (
-        <div className="App">
+        <main className="App">
             <Card />
-        </div>
+        </main>
     );
 }
 
